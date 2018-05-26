@@ -29,10 +29,10 @@ export default {
     };
   },
   created(){
-    this.getarticle();   
+    this.getarticle(); 
   },
-  mounted:{
-    
+  mounted(){
+  
   },
   methods:{
     getarticle:function(){

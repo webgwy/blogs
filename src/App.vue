@@ -41,13 +41,16 @@ export default {
     }
   },
   created(){
-       
+       console.log("A")
+       this.ifs();
   },
-  mounted:{
+  mounted(){
     
   },
   methods: {
-     
+     ifs:function(){
+      console.log("b")
+    }
   },
   components:{articlelist},
 };
