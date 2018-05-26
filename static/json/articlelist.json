@@ -1,17 +1,17 @@
 {
     "list":[
         {
-            "headline":"HybridStart v1.2.0 更新日志",
+            "headline":"第一条标题",
             "date":"2018-05-25",
             "author":"唯一",
-            "articletake":"新增1. 插件机制WEB代码无需编译，部署即可运行，因此可以很容易的实现热插拔插件机制，HybridStart内置了一个插件机制的实现DEMO，见示例APP首页“OTA-plugins(扩展插件)”。实现代码位于/views/ota/，额外引入了zip模块实现插件压缩包的解压，完整流程如下： 插件 ... ",
+            "articletake":"第一条内容",
             "types":"1"
         },
         {
-            "headline":"HybridStart",
+            "headline":"第二条标题",
             "date":"2018-05-28",
             "author":"xiao",
-            "articletake":"新增1. 插件机制WEB代码无需编译，部署即可运行，因此可以很容易的实现热插拔插件机制，HybridStart内置了一个插件机制的实现DEMO，见示例APP首页“OTA-plugins(扩展插件)”。实现代码位于/views/ota/，额外引入了zip模块实现插件压缩包的解压，完整流程如下： 插件 ... ",
+            "articletake":"第二条内容",
             "types":"2"
         }
     ]
