@@ -41,43 +41,20 @@ export default {
     }
   },
   created(){
-       console.log("A")
-       this.ifs();
+      
   },
   mounted(){
     
   },
   methods: {
-     ifs:function(){
-      console.log("b")
-    }
+     
   },
   components:{articlelist},
 };
 </script>
 
 <style>
-/*样式重置*/
-html{font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;}
-body,ul,li,p,h1,h2,h3,h4,h5,h6,img,br,hr,table,tr,td,dl,dt,dd,form {margin: 0;padding: 0;}
-ul,li {list-style: none;}
-img {border: none;}
-i,em{font-style:normal}
-a {text-decoration: none;color: #555;}
-a:hover{color: #3366ff;}
-.block{display: block;}
-.al { text-align: left; }
-.ar { text-align: right; }
-.ac { text-align: center; }
-.fl{float: left;}
-.fr{float: right;}
-.rel { position: relative; }
-.abs { position: absolute; }
-.fid { position: fixed; }
-.text-ju{text-align: justify;}
-.text-in{text-indent: 2em;}
-.text-ov{overflow: hidden;white-space:nowrap; text-overflow:ellipsis; }
-.clearfix:after{content: ' ';display: block;clear: both;height: 0;font-size: 0;}
+/* @import url('../static/css/reset.css'); */
 /*左侧导航*/
 .author{color: #fff;}
 .author h3{line-height: 50px;}

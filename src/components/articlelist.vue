@@ -10,7 +10,7 @@
         <p class="text-in text-ju">{{item.articletake}}</p>
         <div class="articlelist-bot">
             <div class="bot-left">
-              <span><img><a href=""></a></span>
+              <span><img :src="item.types.pic"><a href="">{{item.types.text}}</a></span>
               <span><img><a href=""></a></span>
             </div>
             <div class="bot-right">

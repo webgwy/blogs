@@ -5,21 +5,30 @@
             "date":"2018-05-25",
             "author":"唯一",
             "articletake":"第一条内容",
-            "types":"1"
+            "types":{
+                "pic":"static/img/code.svg",
+                "text":"HTML"
+            }
         },
         {
             "headline":"第二条标题",
             "date":"2018-05-28",
             "author":"xiao",
             "articletake":"第二条内容",
-            "types":"2"
+            "types":{
+                "pic":"static/img/book.svg",
+                "text":"书籍"
+            }
         },
         {
             "headline":"第三条标题",
             "date":"2018-05-29",
             "author":"xiao1",
             "articletake":"第三条内容",
-            "types":"2"
+            "types":{
+                "pic":"static/img/book.svg",
+                "text":"书籍"
+            }
         }
     ]
 }
