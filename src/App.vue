@@ -54,12 +54,15 @@ export default {
 </script>
 
 <style>
-/* @import url('../static/css/reset.css'); */
 /*左侧导航*/
+html,body{height: 100%;}
+.el-container{height: 100%;position: relative;}
 .author{color: #fff;}
 .author h3{line-height: 50px;}
 .author p{font-size: 14px;}
 .author img{width: 160px;height: 160px;border-radius: 50%;}
-.el-aside{background: #545c64;padding-top: 100px;}
+.el-aside{position: fixed;background: #545c64;padding-top: 100px;height: 100%;}
+.el-main{position: absolute;right:0;top:0;padding-left: 350px;width: 100%;}
 .el-menu-item{background: #545c64;}
+
 </style>

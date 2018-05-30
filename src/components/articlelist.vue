@@ -10,8 +10,14 @@
         <p class="text-in text-ju">{{item.articletake}}</p>
         <div class="articlelist-bot">
             <div class="bot-left">
-              <span><img :src="item.types.pic"><a href="">{{item.types.text}}</a></span>
-              <span><img><a href=""></a></span>
+              <span>
+                <img :src="item.types.pic">
+                <a href="" class="tag">{{item.types.text}}</a>
+              </span>
+              <span>
+                <img :src="tagsPic">
+                <a href="" v-for="(tags,index) in item.tagsTitle" :key="index" class="tag">{{tags}}</a>
+              </span>
             </div>
             <div class="bot-right">
                 <a href="#">阅读全文</a>
@@ -26,6 +32,8 @@ export default {
   data() {
     return {
       article:[],
+      tagsPic:"static/img/tags.svg",
+      tags:[]
     };
   },
   created(){
@@ -66,4 +74,6 @@ export default {
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+.bot-left img{vertical-align: middle;}
+.bot-left .tag{padding: 0 5px;font-size: 14px;}
 </style>
