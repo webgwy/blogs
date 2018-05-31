@@ -23,7 +23,7 @@
           </el-menu> 
         </el-aside>
         <el-main>
-         <articlelist></articlelist>
+         <favorite></favorite>
         </el-main>
     </el-container>
      
@@ -32,6 +32,7 @@
 
 <script>
 import articlelist from './components/articlelist'
+import favorite from './components/favorite'
 export default {
   data(){
     return{
@@ -49,7 +50,7 @@ export default {
   methods: {
      
   },
-  components:{articlelist},
+  components:{articlelist,favorite},
 };
 </script>
 
@@ -61,8 +62,7 @@ html,body{height: 100%;}
 .author h3{line-height: 50px;}
 .author p{font-size: 14px;}
 .author img{width: 160px;height: 160px;border-radius: 50%;}
-.el-aside{position: fixed;background: #545c64;padding-top: 100px;height: 100%;}
-.el-main{position: absolute;right:0;top:0;padding-left: 350px;width: 100%;}
+.el-aside{position: fixed;background: #545c64;padding-top: 100px;height: 100%;z-index: 999;}
+.el-main{position: absolute;right:0;top:0;padding-left: 350px;width: 100%;z-index: 1;}
 .el-menu-item{background: #545c64;}
-
 </style>

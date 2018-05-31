@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <!-- <div class="main"> -->
     <ul class="articlelist">
       <li v-for="(item, index) in article" :key="index">
         <h2 class="article-title ac">{{item.headline}}</h2>
@@ -25,7 +25,7 @@
         </div>
       </li>
     </ul>
-  </div>
+  <!-- </div> -->
 </template>
 <script>
 export default {
@@ -56,24 +56,9 @@ export default {
 };
 </script>
 <style>
-.article-property {
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-.article-property span {
-  padding: 0 10px;
-  line-height: 30px;
-  font-size: 16px;
-}
-.articlelist-bot {
-  display: -webkit-flex; /* Safari */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
+.article-property {display: -webkit-flex;display: flex;flex-wrap: nowrap;justify-content: center;}
+.article-property span {padding: 0 10px;line-height: 30px;font-size: 16px;}
+.articlelist-bot {display: -webkit-flex;display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-between;}
 .bot-left img{vertical-align: middle;}
 .bot-left .tag{padding: 0 5px;font-size: 14px;}
 </style>
