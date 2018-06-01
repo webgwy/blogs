@@ -63,6 +63,6 @@ html,body{height: 100%;}
 .author p{font-size: 14px;}
 .author img{width: 160px;height: 160px;border-radius: 50%;}
 .el-aside{position: fixed;background: #545c64;padding-top: 100px;height: 100%;z-index: 999;}
-.el-main{position: absolute;right:0;top:0;padding-left: 350px;width: 100%;z-index: 1;}
+.el-main{position: absolute;right:0;top:0;padding-left: 320px;width: 100%;z-index: 1;}
 .el-menu-item{background: #545c64;}
 </style>
