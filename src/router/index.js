@@ -9,13 +9,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'favorite',
-      component: favorite
+      name: 'articlelist',
+      component: articlelist
     },
     {
       path: '/',
-      name: 'articlelist',
-      component: articlelist
+      name: 'favorite',
+      component: favorite
     }
   ]
 })
