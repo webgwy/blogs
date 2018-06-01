@@ -1,10 +1,9 @@
 <template>
 <div class="classify">
-    <div class="classify-box" v-for="(classifymsg, index) in classify" :key="index">
+    <div class="classify-box" v-for="(classifymsg, index) in classify" :key="index" >
         <h4 class="classify-title">{{classifymsg.subhead}}</h4>
         <ul class="ckassify-ul">
             <li>
-                <!-- <p class="subtitle">{{classifymsg.subhead}}</p> -->
                 <div class="particular">
                     <a href="" v-for="(msg, index) in classifymsg.msg" :key="index">
                         <el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
@@ -22,17 +21,19 @@
 export default {
     data(){
         return{
-            classify:[]
+            classify:[],
         }
     },
+    beforeCreate(){
+
+    },
     created(){
-        this.getfavorite();
+        this.getfavorite(); 
     },
     methods:{
         getfavorite:function(){
             this.$axios.get("static/json/favorite.json")
             .then(response=>{
-                console.log(response.data.list)
                 this.classify=response.data.list;
                 
             })
