@@ -8,14 +8,18 @@
              <p v-text="authorTag"></p>
           </div>
           <el-menu class="el-menu-vertical-demo" text-color="#fff"  background-color="#545c64" active-text-color="#ffd04b">
-            <el-menu-item index="1">
-              <i class="el-icon-menu"></i>
-              <span slot="title">博客</span>
+            <router-link to="/articlelist">
+                <el-menu-item index="1">
+                  <i class="el-icon-menu"></i>
+                  <span slot="title">博客</span>
+                </el-menu-item>
+            </router-link>
+            <router-link to="/favorite">
+                <el-menu-item index="2">
+                  <i class="el-icon-document"></i>
+                  <span slot="title">前端</span>
             </el-menu-item>
-            <el-menu-item index="2">
-              <i class="el-icon-document"></i>
-              <span slot="title">前端</span>
-            </el-menu-item>
+            </router-link>
             <el-menu-item index="3">
               <i class="el-icon-setting"></i>
               <span slot="title">关于我</span>
@@ -23,7 +27,8 @@
           </el-menu> 
         </el-aside>
         <el-main>
-         <favorite></favorite>
+         <!-- <favorite></favorite> -->
+         <router-view></router-view>
         </el-main>
     </el-container>
      
@@ -31,6 +36,7 @@
 </template>
 
 <script>
+// import router from 'vue-router'
 import articlelist from './components/articlelist'
 import favorite from './components/favorite'
 export default {

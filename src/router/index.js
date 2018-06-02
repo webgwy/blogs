@@ -8,14 +8,18 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/articlelist',
       name: 'articlelist',
       component: articlelist
     },
     {
-      path: '/',
+      path: '/favorite',
       name: 'favorite',
       component: favorite
+    },
+    {
+      path: '*',
+      redirect: "/articlelist"
     }
   ]
 })
