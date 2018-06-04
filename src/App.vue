@@ -7,27 +7,28 @@
              <h3 v-text="author"></h3>
              <p v-text="authorTag"></p>
           </div>
-          <el-menu class="el-menu-vertical-demo" text-color="#fff"  background-color="#545c64" active-text-color="#ffd04b">
-            <router-link to="/articlelist">
-                <el-menu-item index="1">
+          <el-menu 
+          default-active="/articlelist" 
+          class="el-menu-vertical-demo" 
+          router 
+          background-color="#545c64" 
+          text-color="#fff" 
+          active-text-color="#ffd04b">
+                <el-menu-item index="/articlelist">
                   <i class="el-icon-menu"></i>
                   <span slot="title">博客</span>
                 </el-menu-item>
-            </router-link>
-            <router-link to="/favorite">
-                <el-menu-item index="2">
+                <el-menu-item index="/favorite">
                   <i class="el-icon-document"></i>
                   <span slot="title">前端</span>
-            </el-menu-item>
-            </router-link>
-            <el-menu-item index="3">
-              <i class="el-icon-setting"></i>
-              <span slot="title">关于我</span>
-            </el-menu-item>
+                </el-menu-item>
+                <el-menu-item index="aboutme">
+                  <i class="el-icon-setting"></i>
+                  <span slot="title">关于我</span>
+                </el-menu-item>
           </el-menu> 
         </el-aside>
         <el-main>
-         <!-- <favorite></favorite> -->
          <router-view></router-view>
         </el-main>
     </el-container>
@@ -36,7 +37,6 @@
 </template>
 
 <script>
-// import router from 'vue-router'
 import articlelist from './components/articlelist'
 import favorite from './components/favorite'
 export default {
@@ -66,7 +66,7 @@ html,body{height: 100%;}
 .el-container{height: 100%;position: relative;}
 .author{color: #fff;}
 .author h3{line-height: 50px;}
-.author p{font-size: 14px;}
+.author p{font-size: 14px;padding: 10px 0;}
 .author img{width: 160px;height: 160px;border-radius: 50%;}
 .el-aside{position: fixed;background: #545c64;padding-top: 100px;height: 100%;z-index: 999;}
 .el-main{position: absolute;right:0;top:0;padding-left: 320px;width: 100%;z-index: 1;}
