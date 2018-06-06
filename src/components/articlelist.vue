@@ -1,6 +1,7 @@
 <template>
   <!-- <div class="main"> -->
     <ul class="articlelist">
+      <a href="###" v-on:click="getjson">123</a>
       <li v-for="(item, index) in article" :key="index">
         <h2 class="article-title ac">{{item.headline}}</h2>
         <div class="article-property">
@@ -40,7 +41,7 @@ export default {
     this.getarticle(); 
   },
   mounted(){
-  
+    
   },
   methods:{
     getarticle:function(){
@@ -51,6 +52,14 @@ export default {
         .catch(error=> {
           console.log(error)
         })
+    },
+    getjson:function(){
+      this.$axios.get(
+      'http://localhost:3000/first',
+      // {headers:{"Content-Type":""}}
+    ).then(function(res){
+      console.log(res.data)
+    })
     }
   }
 };
