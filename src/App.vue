@@ -22,6 +22,10 @@
                   <i class="el-icon-document"></i>
                   <span slot="title">前端</span>
                 </el-menu-item>
+                <el-menu-item index="/login">
+                  <i class="el-icon-document"></i>
+                  <span slot="title">管理</span>
+                </el-menu-item>
                 <el-menu-item index="aboutme">
                   <i class="el-icon-setting"></i>
                   <span slot="title">关于我</span>
@@ -39,6 +43,7 @@
 <script>
 import articlelist from './components/articlelist'
 import favorite from './components/favorite'
+import login from './components/login'
 export default {
   data(){
     return{
@@ -56,7 +61,7 @@ export default {
   methods: {
      
   },
-  components:{articlelist,favorite},
+  components:{articlelist,favorite,login},
 };
 </script>
 
