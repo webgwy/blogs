@@ -46,6 +46,7 @@ export default {
                 var json = eval("("+response.data+")");
                 if(json.type==1){
                     this.$message.success('登录成功');
+                    this.$router.push({path:'/addarticle'})
                 }else if(json.type==2){
                     this.$message.error('用户名密码错误');
                 }
