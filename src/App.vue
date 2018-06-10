@@ -44,6 +44,7 @@
 import articlelist from './components/articlelist'
 import favorite from './components/favorite'
 import login from './components/login'
+import addarticle from './components/addarticle'
 export default {
   data(){
     return{
@@ -61,7 +62,7 @@ export default {
   methods: {
      
   },
-  components:{articlelist,favorite,login},
+  components:{articlelist,favorite,login,addarticle},
 };
 </script>
 

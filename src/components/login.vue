@@ -8,7 +8,7 @@
                 <el-form-item label="密码" prop="password">
                     <el-input placeholder="请输入内容"  type='password' v-model="ruleForm.password" ref="input2"></el-input>
                 </el-form-item>
-                 <el-button type="primary"  @click="onSubmit()">立即创建</el-button>
+                 <el-button type="primary"  @click="onSubmit()" :loading='load'>立即创建</el-button>
             </el-form>
         </div>
     </div>
@@ -18,6 +18,7 @@
 export default {
     data(){
         return{
+            load:false,
             ruleForm: {
                 username: '',
                 password: '',
@@ -37,15 +38,26 @@ export default {
     },
     methods:{
         onSubmit(){
-            this.$axios.post('http://localhost:3000/login',{
-                username:this.$refs.input1.value,
-                password:this.$refs.input2.value
-            }).then(function (response){
-                console.log("成功");
-                console.log(response.data)
+            this.load=true;
+            var params = new URLSearchParams();
+            params.append('username', this.$refs.input1.value);
+            params.append('password', this.$refs.input2.value);
+            this.$axios.post('http://localhost:3000/login', params).then((response)=>{
+                var json = eval("("+response.data+")");
+                if(json.type==1){
+                    this.$message.success('登录成功');
+                }else if(json.type==2){
+                    this.$message.error('用户名密码错误');
+                }
+                // 测试的，正式要删除定时器。
+                setTimeout(() => {  
+                    this.load=false;
+                    console.log('执行了')
+                }, 2000);  
             })
-            .catch(function (error) {
-                console.log(error);
+            .catch((error)=>{
+                this.$message.error('网络错误，请联系管理员');
+                this.load=false;
             });
         },
     }

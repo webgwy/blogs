@@ -8,6 +8,8 @@ import '../static/css/reset.css'
 Vue.use(ElementUI);
 
 
+
+
 Vue.prototype.$axios = axios
 
 Vue.config.productionTip = false;
