@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import articlelist from '@/components/articlelist'
 import favorite from '@/components/favorite'
 import login from '@/components/login'
-import addarticle from '@/components/addarticle'
+import admin from '@/components/admin'
 
 Vue.use(Router)
 
@@ -25,9 +25,9 @@ export default new Router({
       component: login
     },
     {
-      path: '/addarticle',
-      name: 'addarticle',
-      component: addarticle
+      path: '/admin',
+      name: 'admin',
+      component: admin
     },
     {
       path: '*',
