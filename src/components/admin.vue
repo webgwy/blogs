@@ -16,18 +16,22 @@
                     <el-form-item label="文章标题" class="article-title">
                         <el-input v-model="form.name"></el-input>
                       </el-form-item>
-                      <el-form-item label="是否原创">
-                        <el-switch v-model="form.delivery"></el-switch>
-                      </el-form-item>
-                      <el-form-item label="特殊资源">
-                        <el-radio-group v-model="form.resource">
-                          <el-radio label="线上品牌商赞助"></el-radio>
-                          <el-radio label="线下场地免费"></el-radio>
-                        </el-radio-group>
-                      </el-form-item>
-                      <el-form-item class="editor">
+                      <el-form-item class="editor" label="文章内容">
                          <!-- 富文本编辑器 -->
                           <quill-editor v-model="newsContent"></quill-editor>
+                      </el-form-item>
+                      <el-form-item label="是否">
+                        <el-switch v-model="form.isanonymity"></el-switch>
+                      </el-form-item>
+                      <el-form-item label="是否原创">
+                          <el-radio-group v-model="form.isoriginal">
+                            <el-radio border label="1">原创</el-radio>
+                            <el-radio border label="2">参考</el-radio>
+                            <el-radio border label="3">转载</el-radio>
+                          </el-radio-group>
+                      </el-form-item>
+                      <el-form-item label="转载地址" v-if="form.isoriginal!=1">
+                        <el-input placeholder="请输入内容"><template slot="prepend">Http://</template></el-input>
                       </el-form-item>
                       <el-form-item>
                         <el-button type="primary" >立即创建</el-button>
@@ -47,16 +51,13 @@ export default {
       activeName: "first",
       form: {
         name: "",
-        region: "",
-        date1: "",
-        date2: "",
-        delivery: false,
-        type: [],
-        resource: "",
-        desc: ""
+        isoriginal:'1',
+        isanonymity:'',
       },
-      newsContent:''
+      newsContent:'',
     };
+  },
+  created(){
   },
   methods: {
     handleClick(tab, event) {
@@ -66,6 +67,7 @@ export default {
   components: {
     quillEditor
   },
+  
 };
 </script>
 

@@ -21,8 +21,7 @@ export default {
                         toolbar:[
                           ['bold','italic','underline','strike','background','underline','align',{ 'direction': 'rtl' },'formula','image','video','clean'],   
                           ['blockquote', 'code-block'],
-                          [{ 'list': 'ordered'}, { 'list': 'bullet' },{ 'script': 'sub'}, { 'script': 'super' },{ 'color': [] }, { 'background': [] },[{ 'font': [] }],
-[{ 'align': [] }]]
+                          [{ 'list': 'ordered'}, { 'list': 'bullet' },{ 'script': 'sub'}, { 'script': 'super' },{ 'color': [] }, { 'background': [] },{ 'font': [] },{ 'align': [] }],
                         ]
                     }
                 }
